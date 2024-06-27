@@ -1,0 +1,112 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+$black: #0E0E0E
+$prime: #FFC148
+
+body
+    min-height: 100vh
+    font-size: 16px
+    color: white
+    background-color: #0E0E0E
+    font-family: 'Montserrat', sans-serif
+    background-image: url('../img/bg.jpg')
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+
+    position: relative
+    z-index: 1
+    display: flex
+    flex-direction: column
+
+.container
+    max-width: 1522px
+    width: 100%
+    margin: 0 auto
+
+img
+    max-width: 100%
+
+a,
+button
+    color: $black
+    text-decoration: none
+    transition: all ease .3s
+    background-color: transparent
+    &:active
+        transform: scale(.98)
+
+    &:hover
+        opacity: .8
+
+.h2
+    margin-bottom: 10px
+
+ul
+    list-style: none
+
+.btn
+    display: inline-block
+    font-weight: 400
+    font-size: 29px
+    line-height: 100%
+    padding: 24px 60px
+    background-color: $prime
+    border-radius: 19px
+    text-align: center
+    &.--sm
+        padding: 11px 31px
+        font-size: 21px
+        line-height: 25.6px
+
+    img
+        display: inline-block
+        vertical-align: middle
+        width: 24px
+        height: 22px
+        margin-right: 20px
+        object-fit: contain
+
+.fx, .fx-ac
+    display: flex
+    &-ac
+        align-items: center
+
+section,.section
+    padding: 100px 0
+
+input
+    width: 100%
+    background-color: #5B5B5B
+    height: 50px
+    border-radius: 110px
+    padding: 0 20px
+    font-size: 20px
+    font-weight: 500
+    color: white
+    &::placeholder
+        color: #868686
+
+@media screen and ( max-width: 1560px )
+    .container
+        max-width: 1140px
+        padding: 0 20px
+
+    .btn
+        font-size: 20px
+        line-height: 100%
+        padding: 18px 40px
+        &.--sm
+            padding: 11px 20px
+            font-size: 19px
+            line-height: 110%
+
+        img
+            width: 23px
+            height: 20px
+            margin-right: 20px

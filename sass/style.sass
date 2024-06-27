@@ -1,0 +1,142 @@
+@import 'normolize'
+@import 'fonts'
+@import 'elements'
+@import 'header'
+@import 'footer'
+
+.hero
+    margin: auto
+    width: 100%
+    padding: 65px 0
+    overflow: hidden
+    .container
+        position: relative
+        z-index: 1
+
+    &__img
+        position: absolute
+        right: -13%
+        top: 50%
+        transform: translateY(-50%)
+        z-index: -1
+        max-width: 61%
+        object-fit: contain
+        object-position: center right
+        max-height: 90%
+
+    h1
+        font-size: 146.03px
+        line-height: 178.01px
+        font-weight: 700
+        margin: 0
+
+    &__subtext
+        font-size: 64px
+        line-height: 78.02px
+        font-weight: 300
+        margin: 0 0 32px
+
+    &-links
+        width: 267px
+        margin-bottom: 31px
+        .btn
+            width: 100%
+            margin-bottom: 17px
+            &:last-child
+                margin-bottom: 0 !important
+
+    &__descr
+        font-size: 25px
+        line-height: 30.48px
+
+    &__subheading
+        font-weight: 300
+        font-size: 25px
+        line-height: 30.48px
+        opacity: .3
+        margin: 0 0 13px
+
+    &-more
+        padding-top: 86px
+        &__link
+            max-width: 220px
+            margin-bottom: 18px
+            display: block
+            &:last-child
+                margin-bottom: 0 !important
+            img
+                display: block
+
+    @media screen and ( max-width: 1560px )
+        padding: 40px 0
+        h1
+            font-size: 90px
+            line-height: 120%
+
+        &__subtext
+            font-size: 44px
+            line-height: 120%
+            font-weight: 300
+            margin: 0 0 32px
+
+        &__subheading
+            font-weight: 300
+            font-size: 20px
+            line-height: 120%
+
+        &-links
+            width: 240px
+            margin-bottom: 25px
+            .btn
+                margin-bottom: 14px !important
+
+        &__img 
+            max-width: 55%
+
+        &-more
+            padding-top: 46px
+            &__link
+                margin-bottom: 15px
+
+    @media screen and ( max-width: 900px )
+        text-align: center
+        padding: 10px 0 50px
+        &__img 
+            position: relative
+            top: auto 
+            right: -20px
+            transform: none
+            max-width: 80vw
+            margin: 0 0 10px auto 
+            display: block
+
+        h1 
+            font-size: 13vw
+
+        &__subtext
+            font-size: 6vw
+            margin-bottom: 40px
+
+        &__descr 
+            font-size: 20px
+            line-height: 120% 
+
+        &-links
+            width: 280px
+            margin: 0 auto 30px
+            .btn 
+                padding: 11px 40px
+                text-align: left
+
+        &__subheading
+            font-size: 18px
+            margin-bottom: 10px
+
+        &-more 
+            padding-top: 66px
+            text-align: center
+            &__link 
+                width: fit-content
+                margin: 0 auto 12px
+                img 
+                    height: 48px
