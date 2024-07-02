@@ -41,6 +41,7 @@
         margin-bottom: 31px
         .btn
             width: 100%
+            text-align: left
             margin-bottom: 17px
             &:last-child
                 margin-bottom: 0 !important
@@ -90,7 +91,7 @@
             .btn
                 margin-bottom: 14px !important
 
-        &__img 
+        &__img
             max-width: 55%
 
         &-more
@@ -101,30 +102,30 @@
     @media screen and ( max-width: 900px )
         text-align: center
         padding: 10px 0 50px
-        &__img 
+        &__img
             position: relative
-            top: auto 
+            top: auto
             right: -20px
             transform: none
             max-width: 80vw
-            margin: 0 0 10px auto 
+            margin: 0 0 10px auto
             display: block
 
-        h1 
+        h1
             font-size: 13vw
 
         &__subtext
             font-size: 6vw
             margin-bottom: 40px
 
-        &__descr 
+        &__descr
             font-size: 20px
-            line-height: 120% 
+            line-height: 120%
 
         &-links
             width: 280px
             margin: 0 auto 30px
-            .btn 
+            .btn
                 padding: 11px 40px
                 text-align: left
 
@@ -132,11 +133,293 @@
             font-size: 18px
             margin-bottom: 10px
 
-        &-more 
+        &-more
             padding-top: 66px
             text-align: center
-            &__link 
+            &__link
                 width: fit-content
                 margin: 0 auto 12px
-                img 
+                img
                     height: 48px
+
+.main
+    width: 100%
+    margin: auto
+    padding: 0 20px
+    padding-bottom: 40px
+    @media screen and ( max-width: 600px )
+        padding: 20px 15px
+
+.range
+    height: 15px
+    width: 100%
+    border-radius: 41px
+    background-color: rgba(#0E0E0E, .21)
+    &__item
+        border-radius: 41px
+        background-color: $prime
+        display: block
+        width: 0px
+        height: 100%
+        animation: ranger_anim 15s ease-in-out infinite
+
+.box
+    transition: all ease .5s
+    width: 100%
+    max-width: 582px
+    margin: 0 auto
+    border-radius: 41px
+    padding: 30px 24px
+    background-color: #171717
+    &-row
+        padding: 25px 0
+
+    &-header
+        // min-height: 198px
+        padding-bottom: 40px
+        margin-bottom: 20px
+        border-bottom: 1px solid rgba(255, 255, 255, .1)
+
+        &-col
+            width: 60%
+
+    &-err
+        display: flex
+        align-items: center
+        justify-content: center
+        min-height: 77px
+
+        text-align: center
+        font-weight: 300
+        font-size: 23px
+        line-height: 28.04px
+        margin: 0 0 24px
+        color: #FB3E3E
+        padding: 0 0 20px
+        border-bottom: 1px solid rgba(255, 255, 255, .1)
+
+    &__solve
+        font-size: 28px
+        line-height: 34.13px
+        font-weight: 500
+        margin: 0 0 20px
+
+    &__heading
+        font-size: 29px
+        line-height: 35.35px
+        margin: 0 0 12px
+        font-weight: 700
+
+    &__text
+        font-weight: 300
+        font-size: 24px
+        line-height: 29.26px
+        opacity: .3
+        margin: 0
+
+    &-sender
+        width: 39%
+        text-align: center
+        img
+            display: block
+            width: 132.32px
+            height: 132.32px
+            border-radius: 24px
+            margin: 0 auto 7px
+
+        &__text
+            font-size: 18px
+            line-height: 21.94px
+            opacity: .3
+            margin: 0 0 7px
+
+        &__heading
+            font-size: 21px
+            color: $prime
+            line-height: 24px
+            margin: 0
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+
+    &-btns
+        gap: 13px
+        padding: 23px 0 0
+        .btn
+            width: 50%
+
+    &>div
+        &:last-of-type
+            margin-bottom: 0 !important
+            padding-bottom: 0 !important
+
+    @media screen and ( max-width: 600px )
+        padding: 20px 15px
+        border-radius: 25px
+        &-header
+            &-col
+                width: 100%
+                text-align: center
+
+        &-sender
+            width: 100%
+            margin-bottom: 20px
+            &__text
+                margin-bottom: 5px
+
+        &__heading
+            font-size: 24px
+            line-height: 30px
+            text-align: center
+
+        &__text
+            font-size: 18px
+            line-height: 24px
+            text-align: center
+
+        &-btns
+            .btn
+                width: 100%
+
+        &-err
+            font-size: 20px
+            line-height: 25px
+
+        &__solve
+            font-size: 22px
+            line-height: 28px
+
+.purchase
+    padding: 47px 0 20px
+    .subheading
+        font-weight: 400
+        margin: 0 0 14px
+
+    &-wrap
+        display: flex
+        gap: 10px
+        overflow-x: scroll
+        padding-bottom: 18px
+        border-radius: 14px
+        &::-webkit-scrollbar
+            width: 5px
+            height: 5px
+
+        &::-webkit-scrollbar-track
+            background-color: rgba(#6A6A6A, .21)
+            border-radius: 10px
+
+        &::-webkit-scrollbar-thumb
+            background-color: #646464
+            border-radius: 10px
+
+    &-item
+        min-width: 129px
+        width: 129px
+        display: block
+        border-radius: 14px
+        overflow: hidden
+        img
+            display: block
+            width: 100%
+            transition: all ease .3s
+
+        &:hover
+            opacity: 1
+            transform: scale(.94)
+            img
+                transform: scale(1.06) rotate(1deg)
+
+    &.--lg
+        .purchase
+            &-wrap
+                padding-bottom: 28px
+
+            &-item
+                width: 190px
+                min-width: 190px
+
+    &.pt 
+        padding-top: 18px
+
+.load
+    text-align: center
+    min-height: 412px
+    img
+        display: block
+        margin: 0 auto
+        width: 158px
+        animation: rotate_anim 1.5s linear infinite
+
+    @media screen and ( max-width: 600px )
+        min-height: 340px
+        img
+            width: 120px
+
+.search
+    &-header
+        padding-bottom: 14px
+        margin-bottom: 30px
+        text-align: center
+        border-bottom: 1px solid rgba(255,255,255,.1)
+    
+    &-row
+        width: 100%
+    
+    &-res
+        min-height: 240px
+        border-bottom: 1px solid rgba(255,255,255,.1)
+
+    &__text
+        padding: 0 18px
+        width: 100%
+        font-size: 16px
+        line-height: 19.5px
+        margin: 0 0 6px
+
+    &__empty 
+        text-align: center
+        font-size: 16px
+        line-height: 19.5px
+        color: #868686
+
+@keyframes rotate_anim
+    0%
+        transform: rotate(0)
+    100%
+        transform: rotate(-360deg)
+
+@keyframes ranger_anim
+    0%
+        width: 3%
+        left: 7px
+        right: auto
+
+    25%
+        left: 7px
+        right: auto
+        width: 100%
+
+    25.01%
+        width: 100%
+        left: auto
+        right: 7px
+
+    50%
+        left: auto
+        right: 7px
+        width: 3%
+
+    75%
+        left: auto
+        right: 7px
+        width: 100%
+
+    75.01%
+        left: 7px
+        right: auto
+
+    100%
+        left: 7px
+        right: auto
+        width: 3%

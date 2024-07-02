@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>STEAMGIFTS - Первый магазин игр Steam в Telegram</title>
+	<meta name="theme-color" content="#9b35c1">
+	<link type="image/svg" rel="shortcut icon" href="./favicon.svg">
+
+	<link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+	<header>
+		<div class="container fx-ac">
+			<a href="#" class="logo"><img src="img/logo.svg" alt="i"></a>
+			<button class="btn__menu"><span></span></button>
+			<nav class="fx-ac nav">
+				<a href="#" class="nav__link">Главная</a>
+				<a href="#" class="nav__link">Как это работает?</a>
+				<a href="#" class="nav__link">Поддержка</a>
+				<a href="#" class="nav__link">Статус заказа</a>
+				<a href="#" class="btn">Перейти в бота</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="main">
+		<div class="box">
+			<div class="search-header">
+				<h1 class="box__heading">Поиск заказа</h1>
+			</div>
+
+			<h3 class="form__heading subheading">Введите верную ссылку:</h3>
+			<form class="form fx-ac">
+				<input type="text" placeholder="Ваша ссылка на профиль/быстрое приглашение" required>
+				<button class="submit" type="submit"><img src="img/search.svg" alt="search"></button>
+			</form>
+
+			<div class="search-res fx-ac">
+				<div class="search-row">
+					<p class="search__text">
+						Площадка: GGSel <br>
+						Наименование: EA SPORTS FC™ 24 Standard Edition
+					</p>
+					<a href="#" class="btn --lg w-100">Перейти ></a>
+				</div>
+			</div>
+
+			<div class="purchase pt">
+				<h3 class="subheading">Рекомендуем к покупке</h3>
+				<div class="purchase-wrap">
+					<a href="#" class="purchase-item"><img src="img/g-1.jpg" alt="i"></a>
+					<a href="#" class="purchase-item"><img src="img/g-2.jpg" alt="i"></a>
+					<a href="#" class="purchase-item"><img src="img/g-3.jpg" alt="i"></a>
+					<a href="#" class="purchase-item"><img src="img/g-4.jpg" alt="i"></a>
+					<a href="#" class="purchase-item"><img src="img/g-1.jpg" alt="i"></a>
+					<a href="#" class="purchase-item"><img src="img/g-2.jpg" alt="i"></a>
+					<a href="#" class="purchase-item"><img src="img/g-3.jpg" alt="i"></a>
+					<a href="#" class="purchase-item"><img src="img/g-4.jpg" alt="i"></a>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script>
+		const btnMenu = document.querySelector('.btn__menu');
+		const navbar = document.querySelector('.nav');
+		btnMenu.onclick = () => {
+			btnMenu.classList.toggle('is_active');
+			navbar.classList.toggle('is_active');
+		}
+	</script>
+
+</body>
+
+</html>
